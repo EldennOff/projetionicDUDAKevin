@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Création d'une guitare</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-item>
+    <img src="https://i.imgur.com/SG1BLWQ.gif" class="strangerlittle">
+  </ion-item>
+  <ion-item>
+    <ion-label>Photo</ion-label>
+    <ion-input type="text" [(ngModel)]="guitare.picture"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>Nom</ion-label>
+    <ion-input type="text" [(ngModel)]="guitare.nom"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>Marque</ion-label>
+    <ion-input type="text" [(ngModel)]="guitare.marque"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>Prix</ion-label>
+    <ion-input type="number" [(ngModel)]="guitare.prix"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>En Stock ?</ion-label>
+    <ion-toggle [(ngModel)]="guitare.onsell"></ion-toggle>
+  </ion-item>
+  <ion-item>
+    <ion-label>Détail</ion-label>
+    <ion-textarea rows="10" [(ngModel)]="guitare.detail"></ion-textarea>
+  </ion-item>
+  <br>
+  <div class="text-center">
+    <button ion-button (click)="onAdd()">Ajouter</button>
+  </div>
+  <ion-item>
+    <img src="https://i.imgur.com/SG1BLWQ.gif" class="strangerlittle">
+  </ion-item>
+</ion-content>

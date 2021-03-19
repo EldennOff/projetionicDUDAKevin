@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Guitare App !
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <h2 class="titre">Welcome to the guitar app !</h2>
+  <ion-item>
+    <img src="https://i.pinimg.com/originals/89/15/f2/8915f21f7ae626ac62a1b4f7b3574951.gif" class="stranger">
+  </ion-item>
+
+  <h4 text-center="center">Quelques musiques pour égayer votre utilisation</h4>
+
+  <ion-list>
+    <ion-item *ngFor="let track of playlist" (click)="start(track)">
+      <ion-label [color]="track !== activeTrack ? 'success': 'light'">
+        {{track.name}}
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+
+
+<ion-footer *ngIf="activeTrack">
+  <ion-toolbar color="dark">
+    <h4 class="titlemusic">
+        {{ activeTrack.name }}
+    </h4>
+    <ion-item-group class="songplayer">
+          <ion-icon slot="icon-only" (click)="prev()" name="skip-backward" color="light" class="buttonmusic"></ion-icon>
+          <ion-icon slot="icon-only" name="play" (click)="togglePlayer(false)" *ngIf="!isPlaying" color="light" class="buttonplayer"></ion-icon>
+          <ion-icon slot="icon-only" name="pause" (click)="togglePlayer(true)" *ngIf="isPlaying" color="light" class="buttonplayer"></ion-icon>
+          <ion-icon slot="icon-only" name="skip-forward" (click)="next()" color="light" class="buttonmusic"></ion-icon>
+    </ion-item-group>
+  </ion-toolbar>
+</ion-footer>
+
+</ion-content>

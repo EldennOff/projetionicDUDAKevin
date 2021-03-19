@@ -1,0 +1,28 @@
+page-home {
+  .stranger{
+    border-radius: 30px;
+  }
+
+  .titre{
+    text-align: center;
+  }
+
+  .titlemusic{
+    text-align: center;
+    color: white;
+  }
+
+  .songplayer{
+    text-align: center;
+  }
+
+  .buttonplayer{
+    padding-right: 10%;
+    padding-left: 10%;
+  }
+}
+
+ion-content, ion-list, ion-item{
+  --background: var(--ion-color-dark);
+  --ion-background-color: var(--ion-color-dark);
+}
